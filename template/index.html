@@ -26,9 +26,11 @@
 		<ul>
 			<li>Initially we tokenize the tweets using NLTK and Regular Expression i.e remove mention, hashtag, @ etc even the number 1000, 1,000 (mixing)</li>
 			<li>Then filter out stop words like on, in (NLTK has great implementation on this)</li>
+
 			<li>Calculate the frequence of words (i.e running : 3000, health : 345 etc..)</li>
+			<li>merge inter dependent / lexicon word (like ran, run, running)</li>
+			
 			<li>Created bigrams and checked its frquency (i.e running health : 345, running exercise : 786)</li>
-			<li>Calculate the frequence of words (i.e running : 3000, health : 345 etc..)</li>
 			<li>Implement classification stuff (few supervised thing)</li>
 			<li>We implemented semantic orientation for vocabulary to detect few semantic meanings</li>
 		</ul>
@@ -60,13 +62,28 @@
 		  	<div style="width: 112px;">564 tweets ( running exercise fitness )</div>
 		</div>
 
+		</br>
+		</br>
+
+		<h4> Word Classification on correct tweet</h4>
+		<div class="chart">
+			<div style="width: 600px;">1140 tweets</div>
+		  	<div style="width: 140px;">267 tweets (running mile)</div>
+		  	<div style="width: 100px;">191 tweets ( runnign fitness )</div>
+		  	<div style="width: 123px;">234 tweets ( running exercise )</div>
+		  	<div style="width: 235px;">448 tweets ( running exercise fitness )</div>
+		</div>
+
 		<p> We implemented then some probabilisting approach to decide next keyword by detecting keyword ngrams in all the accurate tweets </p>
 
 	</div>
 	
+	<div class="container">	
+		<h2>Naive Adaptive Data Analysis ( Adaptive Keyword selection ) </h2>
+		</div>
 
 	<div class="container">
-		<h3>Naive Adaptive Data Analysis - Data Curated from keyword : running mile</h3>
+		<h3>Data Curated from keyword : running exercise</h3>
 
 		<style>
 
@@ -80,13 +97,47 @@
 			}
 		</style>
 		<div class="chart">
-		  	<div style="width: 40px;">4</div>
-		  	<div style="width: 80px;">8</div>
-		  	<div style="width: 150px;">15</div>
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 286px;">1487</div>
+
+		 </div>
+		 <p> Accuracy : almost 50% </p>
+
+
+		  	<!-- <div style="width: 150px;">15</div>
 		  	<div style="width: 160px;">16</div>
 		  	<div style="width: 230px;">23</div>
-		  	<div style="width: 420px;">42</div>
+		  	<div style="width: 420px;">42</div> -->
 		</div>
+
+		<div class="container">
+
+		<h3>Data Curated from keyword : running miles</h3>
+
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 374px;">1867</div>
+
+		 </div>
+		 <p> Accuracy : almost 63% </p>
+
+		</div>
+
+
+		<div class="container">
+		<h3>Data Curated from keyword : running fitness exercise</h3>
+
+
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 493px;">2466</div>
+
+		 </div>
+		 <p> Accuracy : almost 82% </p>
+
+		</div>
+		</div>
+
 
 	</div>
 </body>
