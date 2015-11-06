@@ -1,4 +1,5 @@
 from django.db import models
+from djangotoolbox.fields import EmbeddedModelField
 
 # Create your models here.
 class Tweet(models.Model):
@@ -24,5 +25,9 @@ class Tweet(models.Model):
 	user_screen_name= models.CharField( max_length=255, blank = True, null = True ) 
 	user_timezone 	= models.CharField( max_length=255, blank = True, null = True )
 	processed		= models.IntegerField( default = 0 )
+
+
+# class Coordinates(models.Model):
+# 	type_ 			= models.CharField( max_length = 255, blank = True, null = True )
 
 		
