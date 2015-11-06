@@ -97,6 +97,7 @@ def add(request):
 
 
 def index( request ):
+	tweets = len(Tweet.objects.all())
 	return render(request, 'index.html', locals() )
 
 # def get( request ):

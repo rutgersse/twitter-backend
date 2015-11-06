@@ -5,14 +5,89 @@
 	<link rel="stylesheet" href="/static/css/bootstrap.css">
 	<link rel="stylesheet" href="/static/css/font-awesome.css">
 	<link rel="stylesheet" href="/static/css/bootstrap-social.css">
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="jquery-1.11.1.min.js"></script>
+
 </head>
 
 <body>
 	<div class="jumbotron" align="center">
 		<h1>HMA Twitter Backend</h1>
 		<p>This is twitter backend for monitoring and analyze the data</p>
+		<p> Total Tweet Fetched : {{ tweets }} </p>
+		<a href="/add/">Fetch</a>
 	</div>
 
+	<div class="container">
+		<h3>Initial Data Analysis - Data curated from keyword : running</h3>
+
+		<p>Initially we curated data from word running, we curated almost 3000 tweets then we analyzed it</p>
+		<ul>
+			<li>Initially we tokenize the tweets using NLTK and Regular Expression i.e remove mention, hashtag, @ etc even the number 1000, 1,000 (mixing)</li>
+			<li>Then filter out stop words like on, in (NLTK has great implementation on this)</li>
+			<li>Calculate the frequence of words (i.e running : 3000, health : 345 etc..)</li>
+			<li>Created bigrams and checked its frquency (i.e running health : 345, running exercise : 786)</li>
+			<li>Calculate the frequence of words (i.e running : 3000, health : 345 etc..)</li>
+			<li>Implement classification stuff (few supervised thing)</li>
+			<li>We implemented semantic orientation for vocabulary to detect few semantic meanings</li>
+		</ul>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 600px;">100% curated tweet</div>
+		  	<div style="width: 228px;">38% accurate data based on analysis</div>
+		  	
+		</div>
+
+		<h4> Word Classification on tweet analysis</h4>
+
+		<div class="chart">
+			<div style="width: 600px;">3000 tweets</div>
+		  	<div style="width: 254px;">1267 tweets (running mile)</div>
+		  	<div style="width: 230px;">897 tweets ( runnign fitness )</div>
+		  	<div style="width: 162px;">812 tweets ( running exercise )</div>
+		  	<div style="width: 112px;">564 tweets ( running exercise fitness )</div>
+		</div>
+
+		<p> We implemented then some probabilisting approach to decide next keyword by detecting keyword ngrams in all the accurate tweets </p>
+
+	</div>
 	
+
+	<div class="container">
+		<h3>Naive Adaptive Data Analysis - Data Curated from keyword : running mile</h3>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 40px;">4</div>
+		  	<div style="width: 80px;">8</div>
+		  	<div style="width: 150px;">15</div>
+		  	<div style="width: 160px;">16</div>
+		  	<div style="width: 230px;">23</div>
+		  	<div style="width: 420px;">42</div>
+		</div>
+
+	</div>
 </body>
 </html>
