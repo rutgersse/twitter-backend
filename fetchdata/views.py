@@ -102,13 +102,10 @@ def add(request):
 		return render (request, 'add.html', locals() )
 
 
-<<<<<<< HEAD
 def index( request ):
 	tweets = len(Tweet.objects.all())
 	return render(request, 'index.html', locals() )
 
-=======
->>>>>>> b3b0660220335759cbdddda53e2d33130decee9b
 # def get( request ):
 # 	s = Tweet.objects.all():
 	
