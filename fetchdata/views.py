@@ -44,7 +44,7 @@ def fetch_twitter_data( keyword ):
 		# data['text'] = r._json['text'].encode('utf-8')
 		# fix coordinate issue
 		if r.coordinates != None:
-			data['coordinates'] =  str(r.coordinates.coordinates[0]) +  ' ' + str(r.coordinates.coordinates[1])
+			data['coordinates'] =  r.coordinates.coordinates
 		else:
 			data['coordinates'] = r.coordinates
 
@@ -96,6 +96,9 @@ def add(request):
 		return render (request, 'add.html', locals() )
 
 
+def index( request ):
+	return render(request, 'index.html', locals() )
+
 # def get( request ):
 # 	s = Tweet.objects.all():
-	
+# 	return s
