@@ -33,40 +33,46 @@ pp=pprint.PrettyPrinter(indent=4)
 
 
 def fetch_twitter_data( keyword ):
-	max_tweets = 1
+	max_tweets = 500
 	results = tweepy.Cursor(api.search, q=keyword).items(max_tweets)
 	s = 0
 
 	l = []
+	results.__dict__
+	dir(results)
+
+	results.page_iterator.__dict__
 	for r in results:
 		s = s + 1
 		data={}
 		# data['text'] = r._json['text'].encode('utf-8')
 		# fix coordinate issue
 		if r.coordinates != None:
-			data['coordinates'] =  r.coordinates.coordinates
+			data['coordinates'] =  str(r._json['coordinates']['coordinates']) +  ' ' + str(r._json['coordinates']['coordinates'])
+
 		else:
-			data['coordinates'] = r.coordinates
+			data['coordinates']= r._json['coordinates']
 
-		# data['created_at']= r.created_at
-		# data['entities']= r.entities
-		data['geo']= r.geo
-		data['tweet_id']= r.id
-		data['id_str']= r.id_str
-		data['lang']= r.lang
-		# data['metadata']= r.metadata
-		data['place']= r.place
-		data['tweet']=r.text
-		# data['user_created_at']=r.user.created_at
-		data['geo_enabled']= r.user.geo_enabled
-		data['user_id']=r.user.id
-		data['user_id_str']=r.user.id_str
-		data['user_lang']=r.user.lang
-		data['user_location']=r.user.location
-		data['user_name']=r.user.name
-		data['user_screen_name']=r.user.screen_name
-		data['user_timezone']=r.user.time_zone
+		data['tweet']=r._json['text'].encode('utf-8')
+		data['coordinates']= r._json['coordinates']
+	    	data['created_at']= r._json['created_at'].encode('utf-8')
 
+		data['geo']= r._json['geo']
+		data['tweet_id']= r._json['id']
+		data['id_str']= r._json['id_str'].encode('utf-8')
+		data['lang']= r._json['lang'].encode('utf-8')
+
+		data['place']= r._json['place']
+
+		data['user_created_at']=r._json['user']['created_at'].encode('utf-8')
+		data['geo_enabled']= r._json['user']['geo_enabled']
+		data['user_id']=r._json['user']['id']
+		data['user_id_str']=r._json['user']['id_str'].encode('utf-8')
+		data['user_lang']=r._json['user']['lang'].encode('utf-8')
+		data['user_location']=r._json['user']['location'].encode('utf-8')
+		data['user_name']=r._json['user']['name'].encode('utf-8')
+		data['user_screen_name']=r._json['user']['screen_name'].encode('utf-8')
+		data['user_timezone']=r._json['user']['time_zone']
 		l.append(data)
 	return l
 
@@ -96,9 +102,6 @@ def add(request):
 		return render (request, 'add.html', locals() )
 
 
-def index( request ):
-	return render(request, 'index.html', locals() )
-
 # def get( request ):
 # 	s = Tweet.objects.all():
-# 	return s
+	
