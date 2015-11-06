@@ -1,13 +1,24 @@
 <html>
 <head>
+	<title>Health Monitoring Analytics</title>
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/font-awesome.css">
+	<link rel="stylesheet" href="/static/css/bootstrap-social.css">
 </head>
 
 <body>
-{{msg}}
-	<form action="/add/" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
-</form>
+<div class="jumbotron" align="center">
+		<h1>HMA Twitter Backend</h1>
+		<p>This is twitter backend for monitoring and analyze the data</p>
+	</div>
+	{{msg}}
+	<div class="col-sm-6 col-sm-offset-4">
+		<form class="form form-group" action="/add/" method="post">
+	    	{% csrf_token %}
+	    	{{ form }}
+	  		<input class="" type="submit" value="Submit" />
+		</form>
+	</div>
 </body>
 </html>
