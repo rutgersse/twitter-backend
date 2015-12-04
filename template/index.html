@@ -33,6 +33,8 @@
 			<li>Created bigrams and checked its frquency (i.e running health : 345, running exercise : 786)</li>
 			<li>Implement classification stuff (few supervised thing)</li>
 			<li>We implemented semantic orientation for vocabulary to detect few semantic meanings</li>
+			<li> </li>
+			
 		</ul>
 
 		<style>
@@ -139,6 +141,195 @@
 		</div>
 
 
+
 	</div>
+
+
+
+	<div class="container">
+		<h2>Current Analysis Scheme / Modeling and Analysis</h2>
+		<h3>Initial Data Analysis - Data curated from keyword for SVM: running exercise</h3>
+		<ul>
+			<li>We implemented SVM supervised learning.</li>
+			<li>We got the required tweet data to be valid or invalid</li>
+			<li>This valid tweet data was passed to the Boltzman Machine to get the next accurate keyword</li>
+			<li>This keyword/combination of words was then passed through SVM and as we can seen the accuracy rate increased</li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<h2>1-Running</h2>
+		<h3>First Iteration</h3>
+		
+		<h3>Analysis on the keyword: running exercise</h3>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 310px;">1630</div>
+
+		 </div>
+		 <p> Accuracy : almost 54% </p>
+
+		</div>
+
+		<div class="container">
+			<h3>Word Recommended from the Boltzman Machine</h3>
+			<h4>recommended combination of words: running miles</h4>
+
+		</div>
+
+		<div class="container">
+		<h3>Second Iteration</h3>
+		<h3>Analysis on the keyword: running miles</h3>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 356px;">2060</div>
+
+		 </div>
+		 <p> Accuracy : almost 67.5% </p>
+
+		</div>
+
+		<div class="container">
+		<h2>2-Swimming</h2>
+		<h3>First Iteration</h3>
+		
+		<h3>Analysis on the keyword: Swimming calories</h3>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 290px;">1533</div>
+
+		 </div>
+		 <p> Accuracy : almost 50% </p>
+
+		</div>
+
+		<div class="container">
+			<h3>Word Recommended from the Boltzman Machine</h3>
+			<h4>recommended combination of words: swimming hour calories</h4>
+
+		</div>
+
+		<div class="container">
+		<h3>Second Iteration</h3>
+		<h3>Analysis on the keyword: swimming hour calories</h3>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 380px;">2300</div>
+
+		 </div>
+		 <p> Accuracy : almost 78% </p>
+
+		</div>
+
+		<div class="container">
+		<h2>3-Gym</h2>
+		<h3>First Iteration</h3>
+		
+		<h3>Analysis on the keyword: Gym Workout</h3>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 200px;">990</div>
+
+		 </div>
+		 <p> Accuracy : almost 33% </p>
+
+		</div>
+
+		<div class="container">
+			<h3>Word Recommended from the Boltzman Machine</h3>
+			<h4>recommended combination of words: Gym Workout Hours</h4>
+
+		</div>
+
+		<div class="container">
+		<h3>Second Iteration</h3>
+		<h3>Analysis on the keyword: Gym Workout Hours</h3>
+
+		<style>
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: #ca072d;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+		</style>
+		<div class="chart">
+		  	<div style="width: 600px;">3000</div>
+		  	<div style="width: 375px;">2200</div>
+
+		 </div>
+		 <p> Accuracy : almost 75% </p>
+
+		</div>
+
+		<h3></h3>
+
+
+
+
+
 </body>
 </html>
