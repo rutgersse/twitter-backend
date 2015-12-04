@@ -328,8 +328,63 @@
 		<h3></h3>
 
 
+		<div class="container">
+			<h2>Machine Learning Procedure (SVM)</h2>
+
+			<p>Previously we did naive adaptive learning approach</p>
 
 
+<p>Theoretically well motivated algorithm: developed from Statistical Learning Theory (Vapnik & Chervonenkis) since the 60s.</p>
 
+<p>Empirically good performance: successful applications in many fields (bioinformatics, text, image recognition, . . . )</p>
+
+basic idea of SVM in layman terms find the separation between two set of values so that margin from set of values to separation plain become maximum
+
+impose more variable that affect ours analysis 
+
+<h3>What we did</h3>
+<ul>
+	<li>trained first </li>
+
+<li>5000 + supervised tweet </li>
+
+<li>trained it </li>
+
+<li>then processed 20k + tweets </li>
+
+<li>collect accurate tweets</li>
+
+<li>those accurate tweets we monitored again and sampled them ( human corrected tweets )</li>
+
+<li>merge those tweets to initial 5000 tweets </li>
+
+<li>train the model again</li>
+
+</ul>
+		
+
+<h3>More Analysis</h3>
+<ul>
+	<li>So here we take tokens of the tweets as input </li>
+
+<li>Every token has its own semantic value based on semantic analysis we did (i.e running 9, precidency -7 based on the analysis how the occurance of those words in correct and incorrect tweets) </li>
+
+<li>so now every tweet we have some set of values </li>
+
+<li>we impleted SVM and based on we calculated the support vector</li>
+
+<li>Everytime we run this that produce different accurate vector</li>
+
+<li>so sometimes when words are too much interrelated might produce incorrect result thats what we found after seeing analysed tweets </li>
+
+<li>moved to non linear instead of linear </li>
+
+<li>we used Kernal method </li>
+
+<li>Kernal method is used for finding and studying general types of relations (for example clusters, rankings, principal components, correlations, classifications) in datasets -> And thats what exactly we want </li>
+
+<li>so we created cluster based of semantic orientation based on the rating schema and also do classifications </li>
+</ul>
+</div>
 </body>
 </html>
