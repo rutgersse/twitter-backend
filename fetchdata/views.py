@@ -18,10 +18,10 @@ from fetchdata.forms import keyword
 
 import tweepy
 
-consumer_key='Ps23uVmAKDV411Dy2IRYy7lQg'
-consumer_secret='d5YeK6fTsEIdO2uvqcXhcVYyfFevUhEGB4U7sGjp3E2dHOBKXE'
-access_token='2815485672-eitb2H5XVNCA8wH8pf7lii3sk4hrWUrMLQZu2ly'
-access_token_secret='lXZgILiH634fbYcED4HBF3n8IbezET9PXZB6VS0BrZKRM'
+consumer_key='TtKWskNd3MLhH1mAXcmEX3eg3'
+consumer_secret='E9ypgB3IdIVVnrTvCbDCB4kKjbfRRLGtudq6hlVQo0x5X4UMLU'
+access_token='2235708836-8t5GhrlaxDyoB8IUaJyzn2aeZtbWuuake76JzyG'
+access_token_secret='0jBkrakX3drH2CxaeJa8D3kVhDIimDqrElWWyPDJ10hFV'
 # OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -33,7 +33,7 @@ pp=pprint.PrettyPrinter(indent=4)
 
 
 def fetch_twitter_data( keyword ):
-	max_tweets = 500
+	max_tweets = 3000
 	results = tweepy.Cursor(api.search, q=keyword).items(max_tweets)
 	s = 0
 
